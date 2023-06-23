@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CategoryController!{% endblock %}
+
+{% block body %}
+
+
+<div class="container mt-4">
+
+    <ul>
+        {% for program in programs %}
+            <li class="text-primary"> {{ program.id }} / {{ program.title }} </li>
+            <p>{{ program.summary }}</p>
+            <a href="{{ path("program_show", {id: program.id}) }}">Voir la fiche</a>   
+            <hr>
+        {% endfor %}
+
+    </ul>
+</div>
+{% endblock %}

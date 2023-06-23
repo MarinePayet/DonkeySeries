@@ -15,4 +15,12 @@ class DefaultController extends AbstractController
             'controller_name' => 'DefaultController',
         ]);
     }
+
+    #[Route('/errot', name: 'app_error_404')]
+    public function error(): Response
+    {
+        return $this->render('default/404.html.twig', [
+            'controller_name' => 'DefaultController',
+        ]);
+    }
 }
